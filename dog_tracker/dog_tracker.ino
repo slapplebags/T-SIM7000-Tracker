@@ -1,71 +1,13 @@
-/*  This is an example sketch to test the core functionalities of SIMCom-based cellular modules.
-    This code supports the SIM7000-series modules (LTE/NB-IoT shields) for low-power IoT devices!
-
-    The pin definitions and communication initialization in this sketch are specifically for the ESP32.
-    It doesn't matter what ESP32 dev board you use as long as long as you make the following connections:
-    - 3V3 (ESP32) --> 5V (shield's logic voltage pin)
-    - GND (ESP32) --> GND (shield)
-    - RX2 (ESP32) --> 10 (shield's TX)
-    - TX2 (ESP32) --> 11 (shield's RX)
-    - D5 (ESP32) --> 7 (shield's RST)
-    - D18 (ESP32) --> 6 (shield's PWRKEY)
-    - Also make sure to connect a 3.7V LiPo battery to the shield's JST connector!!!
-    - Optional: SCL (GPIO22) and SDA (GPIO21) if you want to use the temperature sensor
-
-    Note that you can change the pin definitions to use TX1/RX1 but some ESP32 dev boards do not have these pins
-    broken out (like the DOIT ESP32 dev board, for example). You can also change the TX/RX pins to pretty much
-    anything you want, but here we'll just use the default. Furthermore, you can change the RST and PWRKEY pins
-    to any other GPIO you'd like.
-
-    Author: Timothy Woo (www.botletics.com)
-    Github: https://github.com/botletics/SIM7000-LTE-Shield
-    Last Updated: 12/26/2018
-    License: GNU GPL v3.0
-*/
-
-/******* ORIGINAL ADAFRUIT FONA LIBRARY TEXT *******/
-/***************************************************
-  This is an example for our Adafruit FONA Cellular Module
-
-  Designed specifically to work with the Adafruit FONA
-  ----> http://www.adafruit.com/products/1946
-  ----> http://www.adafruit.com/products/1963
-  ----> http://www.adafruit.com/products/2468
-  ----> http://www.adafruit.com/products/2542
-
-  These cellular modules use TTL Serial to communicate, 2 pins are
-  required to interface
-  Adafruit invests time and resources providing this open source code,
-  please support Adafruit and open-source hardware by purchasing
-  products from Adafruit!
-
-  Written by Limor Fried/Ladyada for Adafruit Industries.
-  BSD license, all text above must be included in any redistribution
- ****************************************************/
-//https://dweet.io/get/latest/dweet/for/869951031430170
+//https://dweet.io/get/latest/dweet/for/8699510314301701
 #include <ArduinoJson.h>
 #include "Adafruit_FONA.h" // https://github.com/botletics/SIM7000-LTE-Shield/tree/master/Code
-
-// Define *one* of the following lines:
-//#define SIMCOM_2G // SIM800/808/900/908, etc.
-//#define SIMCOM_3G // SIM5320A/E
 #define SIMCOM_7000 // SIM7000A/C/E/G
-//#define SIMCOM_7500 // SIM7500A/E
 
 // For SIM7000 shield with ESP32
 #define FONA_PWRKEY 4
 #define FONA_RST 25
 #define FONA_TX 26 // ESP32 hardware serial RX2 (GPIO16)
 #define FONA_RX 27 // ESP32 hardware serial TX2 (GPIO17)
-
-// For SIM7500 shield
-//#define FONA_PWRKEY 6
-//#define FONA_RST 7
-////#define FONA_DTR 9 // Connect with solder jumper
-////#define FONA_RI 8 // Need to enable via AT commands
-//#define FONA_TX 11 // Microcontroller RX
-//#define FONA_RX 10 // Microcontroller TX
-////#define T_ALERT 5 // Connect with solder jumper
 
 // For ESP32 hardware serial
 #include <HardwareSerial.h>
@@ -204,10 +146,12 @@ void setup() {
   fona.setNetLED(true, 2, 64, 3000); // on/off, mode, timer_on, timer_off
   fona.setNetLED(false); // Disable network status LED
   */
+  delay(1000);
   fona.enableGPS(true);
   fona.enableGPRS(true);
   fona.println("AT+SGPIO=0,4,1,1");
-  printMenu();
+
+//  printMenu();
 }
 
 void printMenu(void) {
@@ -290,11 +234,87 @@ void printMenu(void) {
 }
 
 void loop() {
-  Serial.print(F("FONA> "));
-  while (! Serial.available() ) {
-    if (fona.available()) {
-      Serial.write(fona.read());
-    }
+//  Serial.print(F("FONA> "));
+//  while (! Serial.available() ) {
+//    if (fona.available()) {
+//      Serial.write(fona.read());
+//    }
+{
+delay(60000);
+        // read website URL
+        uint16_t statuscode;
+        int16_t length;
+        char* url = "http://dweet.io/get/latest/dweet/for/869951031430170";
+        char replybuffer[254];
+        uint16_t replyidx = 0;
+        
+        flushSerial();
+        Serial.println(F("URL to read (e.g. dweet.io/get/latest/dweet/for/869951031430170):"));
+//        Serial.print(F("http://")); readline(url, 79);
+        Serial.println(url);
+
+        Serial.println(F("****"));
+        if (!fona.HTTP_GET_start(url, &statuscode, (uint16_t *)&length)) {
+          Serial.println("Failed!");
+//          break;
+        }
+        while (length > 0) {
+          while (fona.available()) {
+            char c = fona.read();
+            replybuffer[replyidx] = c;
+            replyidx++;
+                
+            length--;
+            if (! length) break;
+            
+          }
+        }
+        Serial.println(F("\n****"));
+        fona.HTTP_GET_end();
+        Serial.println(replybuffer);       
+        const size_t capacity = JSON_OBJECT_SIZE(1) + 2*JSON_OBJECT_SIZE(4) + 323;
+        DynamicJsonDocument doc(capacity);
+        const char* json = replybuffer;
+deserializeJson(doc, json);
+JsonObject with_0 = doc["with"][0];
+const char* with_0_content_state = with_0["content"]["state"]; // "found"
+       Serial.println(with_0_content_state);
+       if (strcmp(with_0_content_state, lost) == 0){
+          //float latitude, longitude, speed_kph, heading, altitude, second;
+        uint16_t year;
+        uint8_t month, day, hour, minute;
+        char URL[150];
+
+        // Use the top line if you want to parse UTC time data as well, the line below it if you don't care
+        //        if (fona.getGPS(&latitude, &longitude, &speed_kph, &heading, &altitude, &year, &month, &day, &hour, &minute, &second)) {
+        if (fona.getGPS(&latitude, &longitude, &speed_kph, &heading, &altitude)) { // Use this line instead if you don't want UTC time
+          Serial.println(F("---------------------"));
+          Serial.print(F("Latitude: ")); Serial.println(latitude, 6);
+          Serial.print(F("Longitude: ")); Serial.println(longitude, 6);
+          Serial.print(F("Speed: ")); Serial.println(speed_kph);
+          Serial.print(F("Heading: ")); Serial.println(heading);
+          Serial.print(F("Altitude: ")); Serial.println(altitude);
+          // Comment out the stuff below if you don't care about UTC time
+          char latBuff[12], longBuff[12];
+          dtostrf(latitude, 1, 6, latBuff);
+          dtostrf(longitude, 1, 6, longBuff);
+
+          sprintf(URL, "dweet.io/dweet/for/%s1?lat=%s&long=%s", imei, latBuff, longBuff);
+
+          if (!fona.postData("GET", URL))
+          Serial.println(F("Failed to complete HTTP GET..."));
+          
+          /*
+            Serial.print(F("Year: ")); Serial.println(year);
+            Serial.print(F("Month: ")); Serial.println(month);
+            Serial.print(F("Day: ")); Serial.println(day);
+            Serial.print(F("Hour: ")); Serial.println(hour);
+            Serial.print(F("Minute: ")); Serial.println(minute);
+            Serial.print(F("Second: ")); Serial.println(second);
+            Serial.println(F("---------------------"));
+          */
+        }
+        }
   }
 
   char command = Serial.read();
@@ -303,7 +323,7 @@ void loop() {
 
   switch (command) {
     case '?': {
-        printMenu();
+        //printMenu();
         break;
       }
 
@@ -1108,7 +1128,7 @@ const char* with_0_content_state = with_0["content"]["state"]; // "found"
 
     default: {
         Serial.println(F("Unknown command"));
-        printMenu();
+        //printMenu();
         break;
       }
   }
