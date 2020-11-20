@@ -10,7 +10,7 @@
 HardwareSerial fonaSS(1);
 Adafruit_FONA_LTE fona = Adafruit_FONA_LTE();
 #define uS_TO_S_FACTOR 1000000ULL  /* Conversion factor for micro seconds to seconds */
-#define TIME_TO_SLEEP  900        /* Time ESP32 will go to sleep (in seconds) */
+#define TIME_TO_SLEEP  600        /* Time ESP32 will go to sleep (in seconds) */
 
 
 uint8_t readline(char *buff, uint8_t maxbuff, uint16_t timeout = 0);
@@ -24,15 +24,12 @@ const char* lost = "lost";
 char latBuff[12], longBuff[12];
 
 void setup() {
-  //  while (!Serial);
 delay(1000);
   pinMode(FONA_RST, OUTPUT);
   digitalWrite(FONA_RST, HIGH); // Default state
 
   pinMode(FONA_PWRKEY, OUTPUT);
 
-  // Turn on the module by pulsing PWRKEY low for a little bit
-  // This amount of time depends on the specific module that's used
   powerOn(); // See function definition at the very end of the sketch
 
   Serial.begin(9600);
@@ -79,6 +76,7 @@ void loop() {
    fona.enableGPS(true);
   fona.enableGPRS(true); //enable data 
   delay(1000);
+/*
   int8_t gpsstat = fona.GPSstatus();
  Serial.println("starting loop");
  uint8_t n = fona.getNetworkStatus();
@@ -99,6 +97,7 @@ void loop() {
         if (gpsstat == 2) Serial.println(F("2D fix"));
         if (gpsstat == 3) Serial.println(F("3D fix"));
          delay(3000);
+*/         
 // read website URL
         uint16_t statuscode;
         int16_t length;
