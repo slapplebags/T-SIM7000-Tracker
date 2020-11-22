@@ -2735,13 +2735,13 @@ Please make sure your boards conform to these design rules.</description>
 <via x="46.609" y="11.049" extent="1-16" drill="0.35"/>
 <via x="47.498" y="11.049" extent="1-16" drill="0.35"/>
 <via x="48.387" y="11.049" extent="1-16" drill="0.35"/>
-<via x="44.831" y="8.636" extent="1-16" drill="0.35"/>
-<via x="45.72" y="8.636" extent="1-16" drill="0.35"/>
-<via x="46.609" y="8.636" extent="1-16" drill="0.35"/>
-<via x="47.498" y="8.636" extent="1-16" drill="0.35"/>
-<via x="48.387" y="8.636" extent="1-16" drill="0.35"/>
-<via x="49.276" y="8.636" extent="1-16" drill="0.35"/>
-<via x="50.165" y="8.636" extent="1-16" drill="0.35"/>
+<via x="44.831" y="8.763" extent="1-16" drill="0.35"/>
+<via x="45.72" y="8.763" extent="1-16" drill="0.35"/>
+<via x="46.609" y="8.763" extent="1-16" drill="0.35"/>
+<via x="47.498" y="8.763" extent="1-16" drill="0.35"/>
+<via x="48.387" y="8.763" extent="1-16" drill="0.35"/>
+<via x="49.276" y="8.763" extent="1-16" drill="0.35"/>
+<via x="50.165" y="8.763" extent="1-16" drill="0.35"/>
 <via x="44.831" y="15.748" extent="1-16" drill="0.35"/>
 <via x="45.72" y="15.748" extent="1-16" drill="0.35"/>
 <via x="46.609" y="15.748" extent="1-16" drill="0.35"/>
@@ -2756,9 +2756,15 @@ Please make sure your boards conform to these design rules.</description>
 <via x="48.387" y="18.034" extent="1-16" drill="0.35"/>
 <via x="49.276" y="18.034" extent="1-16" drill="0.35"/>
 <via x="50.165" y="18.034" extent="1-16" drill="0.35"/>
-<polygon width="0.1524" layer="1" isolate="0.254">
+<polygon width="0.1524" layer="1" isolate="0.1524">
 <vertex x="54.864" y="19.939"/>
 <vertex x="43.18" y="19.939"/>
+<vertex x="43.18" y="10.668"/>
+<vertex x="54.864" y="10.668"/>
+</polygon>
+<polygon width="0.1524" layer="1">
+<vertex x="54.864" y="9.144"/>
+<vertex x="43.18" y="9.144"/>
 <vertex x="43.18" y="7.366"/>
 <vertex x="54.864" y="7.366"/>
 </polygon>

@@ -2730,11 +2730,11 @@ Please make sure your boards conform to these design rules.</description>
 <contactref element="C5" pad="1"/>
 <contactref element="SWDPROG" pad="3"/>
 <contactref element="SWDPROG" pad="5"/>
-<via x="44.831" y="11.176" extent="1-16" drill="0.35"/>
-<via x="45.72" y="11.176" extent="1-16" drill="0.35"/>
-<via x="46.609" y="11.176" extent="1-16" drill="0.35"/>
-<via x="47.498" y="11.176" extent="1-16" drill="0.35"/>
-<via x="48.387" y="11.176" extent="1-16" drill="0.35"/>
+<via x="44.831" y="11.049" extent="1-16" drill="0.35"/>
+<via x="45.72" y="11.049" extent="1-16" drill="0.35"/>
+<via x="46.609" y="11.049" extent="1-16" drill="0.35"/>
+<via x="47.498" y="11.049" extent="1-16" drill="0.35"/>
+<via x="48.387" y="11.049" extent="1-16" drill="0.35"/>
 <via x="44.831" y="8.636" extent="1-16" drill="0.35"/>
 <via x="45.72" y="8.636" extent="1-16" drill="0.35"/>
 <via x="46.609" y="8.636" extent="1-16" drill="0.35"/>
@@ -2742,21 +2742,21 @@ Please make sure your boards conform to these design rules.</description>
 <via x="48.387" y="8.636" extent="1-16" drill="0.35"/>
 <via x="49.276" y="8.636" extent="1-16" drill="0.35"/>
 <via x="50.165" y="8.636" extent="1-16" drill="0.35"/>
-<via x="44.831" y="15.875" extent="1-16" drill="0.35"/>
-<via x="45.72" y="15.875" extent="1-16" drill="0.35"/>
-<via x="46.609" y="15.875" extent="1-16" drill="0.35"/>
-<via x="47.498" y="15.875" extent="1-16" drill="0.35"/>
-<via x="48.387" y="15.875" extent="1-16" drill="0.35"/>
-<via x="49.276" y="15.875" extent="1-16" drill="0.35"/>
-<via x="50.165" y="15.875" extent="1-16" drill="0.35"/>
-<via x="44.831" y="17.907" extent="1-16" drill="0.35"/>
-<via x="45.72" y="17.907" extent="1-16" drill="0.35"/>
-<via x="46.609" y="17.907" extent="1-16" drill="0.35"/>
-<via x="47.498" y="17.907" extent="1-16" drill="0.35"/>
-<via x="48.387" y="17.907" extent="1-16" drill="0.35"/>
-<via x="49.276" y="17.907" extent="1-16" drill="0.35"/>
-<via x="50.165" y="17.907" extent="1-16" drill="0.35"/>
-<polygon width="0.1524" layer="1">
+<via x="44.831" y="15.748" extent="1-16" drill="0.35"/>
+<via x="45.72" y="15.748" extent="1-16" drill="0.35"/>
+<via x="46.609" y="15.748" extent="1-16" drill="0.35"/>
+<via x="47.498" y="15.748" extent="1-16" drill="0.35"/>
+<via x="48.387" y="15.748" extent="1-16" drill="0.35"/>
+<via x="49.276" y="15.748" extent="1-16" drill="0.35"/>
+<via x="50.165" y="15.748" extent="1-16" drill="0.35"/>
+<via x="44.831" y="18.034" extent="1-16" drill="0.35"/>
+<via x="45.72" y="18.034" extent="1-16" drill="0.35"/>
+<via x="46.609" y="18.034" extent="1-16" drill="0.35"/>
+<via x="47.498" y="18.034" extent="1-16" drill="0.35"/>
+<via x="48.387" y="18.034" extent="1-16" drill="0.35"/>
+<via x="49.276" y="18.034" extent="1-16" drill="0.35"/>
+<via x="50.165" y="18.034" extent="1-16" drill="0.35"/>
+<polygon width="0.1524" layer="1" isolate="0.254">
 <vertex x="54.864" y="19.939"/>
 <vertex x="43.18" y="19.939"/>
 <vertex x="43.18" y="7.366"/>
@@ -2816,7 +2816,8 @@ Please make sure your boards conform to these design rules.</description>
 <signal name="RF_ANT">
 <contactref element="U1" pad="60"/>
 <contactref element="X1" pad="3"/>
-<wire x1="42.988" y1="16.891" x2="51.18" y2="16.891" width="0.6096" layer="1"/>
+<wire x1="51.18" y1="16.891" x2="44.577" y2="16.891" width="1.016" layer="1"/>
+<wire x1="44.577" y1="16.891" x2="42.988" y2="16.891" width="0.6096" layer="1"/>
 </signal>
 <signal name="SIM_VCC">
 <contactref element="U1" pad="30"/>
@@ -2950,17 +2951,20 @@ Please make sure your boards conform to these design rules.</description>
 <signal name="N$1">
 <contactref element="C7" pad="2"/>
 <contactref element="U1" pad="53"/>
-<wire x1="42.988" y1="9.891" x2="45.617" y2="9.891" width="0.6096" layer="1"/>
 <wire x1="45.617" y1="9.891" x2="45.632" y2="9.906" width="0.1524" layer="1"/>
+<wire x1="44.577" y1="9.906" x2="45.632" y2="9.906" width="1.016" layer="1"/>
+<wire x1="42.988" y1="9.891" x2="42.988" y2="9.906" width="0.6096" layer="1"/>
+<wire x1="42.988" y1="9.906" x2="44.577" y2="9.906" width="0.6096" layer="1"/>
 </signal>
 <signal name="N$3">
 <contactref element="C7" pad="1"/>
 <contactref element="X2" pad="3"/>
 <contactref element="L1" pad="2"/>
-<wire x1="47.332" y1="9.906" x2="49.387" y2="9.906" width="0.6096" layer="1"/>
 <wire x1="49.387" y1="9.906" x2="49.403" y2="9.922" width="0.1524" layer="1"/>
-<wire x1="49.403" y1="9.922" x2="51.164" y2="9.922" width="0.6096" layer="1"/>
 <wire x1="51.164" y1="9.922" x2="51.18" y2="9.906" width="0.1524" layer="1"/>
+<wire x1="51.18" y1="9.906" x2="49.403" y2="9.906" width="1.016" layer="1"/>
+<wire x1="49.403" y1="9.906" x2="49.403" y2="9.922" width="1.016" layer="1"/>
+<wire x1="47.332" y1="9.906" x2="49.403" y2="9.906" width="1.016" layer="1"/>
 </signal>
 <signal name="LTE_RST">
 <contactref element="D2" pad="C"/>

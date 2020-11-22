@@ -34,7 +34,7 @@
 <layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
@@ -2735,13 +2735,13 @@ Please make sure your boards conform to these design rules.</description>
 <via x="46.609" y="11.049" extent="1-16" drill="0.35"/>
 <via x="47.498" y="11.049" extent="1-16" drill="0.35"/>
 <via x="48.387" y="11.049" extent="1-16" drill="0.35"/>
-<via x="44.831" y="8.636" extent="1-16" drill="0.35"/>
-<via x="45.72" y="8.636" extent="1-16" drill="0.35"/>
-<via x="46.609" y="8.636" extent="1-16" drill="0.35"/>
-<via x="47.498" y="8.636" extent="1-16" drill="0.35"/>
-<via x="48.387" y="8.636" extent="1-16" drill="0.35"/>
-<via x="49.276" y="8.636" extent="1-16" drill="0.35"/>
-<via x="50.165" y="8.636" extent="1-16" drill="0.35"/>
+<via x="44.831" y="8.763" extent="1-16" drill="0.35"/>
+<via x="45.72" y="8.763" extent="1-16" drill="0.35"/>
+<via x="46.609" y="8.763" extent="1-16" drill="0.35"/>
+<via x="47.498" y="8.763" extent="1-16" drill="0.35"/>
+<via x="48.387" y="8.763" extent="1-16" drill="0.35"/>
+<via x="49.276" y="8.763" extent="1-16" drill="0.35"/>
+<via x="50.165" y="8.763" extent="1-16" drill="0.35"/>
 <via x="44.831" y="15.748" extent="1-16" drill="0.35"/>
 <via x="45.72" y="15.748" extent="1-16" drill="0.35"/>
 <via x="46.609" y="15.748" extent="1-16" drill="0.35"/>
