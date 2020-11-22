@@ -171,7 +171,7 @@ void loop() {
         }
 
         }
-        Serial.println("no update, sleeping");
+        Serial.println("sleeping");
         fona.enableSleepMode(true);
         esp_deep_sleep_start();
 }
