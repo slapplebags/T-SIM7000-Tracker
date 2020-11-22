@@ -17,7 +17,7 @@ uint8_t readline(char *buff, uint8_t maxbuff, uint16_t timeout = 0);
 uint8_t type;
 char replybuffer[255]; // this is a large buffer for replies
 char imei[16] = {0}; // MUST use a 16 character buffer for IMEI!
-char c[255];
+char c [255];
 float latitude, longitude, speed_kph, heading, altitude, second;
 const char* found = "found";
 const char* lost = "lost";
@@ -147,23 +147,23 @@ void loop() {
         if (strcmp(with_0_content_state, lost) == 0){
           Serial.println("lost");
           //float latitude, longitude, speed_kph, heading, altitude, second;
-        uint16_t year;
-        uint8_t month, day, hour, minute;
-        char URL[150];
+          uint16_t year;
+          uint8_t month, day, hour, minute;
+          char URL[150];
 
-        // Use the top line if you want to parse UTC time data as well, the line below it if you don't care
-        //        if (fona.getGPS(&latitude, &longitude, &speed_kph, &heading, &altitude, &year, &month, &day, &hour, &minute, &second)) {
-        if (fona.getGPS(&latitude, &longitude, &speed_kph, &heading, &altitude)) { // Use this line instead if you don't want UTC time
-          Serial.println(F("---------------------"));
-          Serial.print(F("Latitude: ")); Serial.println(latitude, 6);
-          Serial.print(F("Longitude: ")); Serial.println(longitude, 6);
+          // Use the top line if you want to parse UTC time data as well, the line below it if you don't care
+          //        if (fona.getGPS(&latitude, &longitude, &speed_kph, &heading, &altitude, &year, &month, &day, &hour, &minute, &second)) {
+          if (fona.getGPS(&latitude, &longitude, &speed_kph, &heading, &altitude)) { // Use this line instead if you don't want UTC time
+            Serial.println(F("---------------------"));
+            Serial.print(F("Latitude: ")); Serial.println(latitude, 6);
+            Serial.print(F("Longitude: ")); Serial.println(longitude, 6);
 //          Serial.print(F("Speed: ")); Serial.println(speed_kph);
 //          Serial.print(F("Heading: ")); Serial.println(heading);
 //          Serial.print(F("Altitude: ")); Serial.println(altitude);
-          dtostrf(latitude, 1, 6, latBuff);
-          dtostrf(longitude, 1, 6, longBuff);
+            dtostrf(latitude, 1, 6, latBuff);
+            dtostrf(longitude, 1, 6, longBuff);
 
-          sprintf(URL, "dweet.io/dweet/for/%s1?lat=%s&long=%s", imei, latBuff, longBuff);
+            sprintf(URL, "dweet.io/dweet/for/%s1?lat=%s&long=%s", imei, latBuff, longBuff);
 
           if (!fona.postData("GET", URL))
           Serial.println(F("Failed to complete HTTP GET..."));

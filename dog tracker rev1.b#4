@@ -3147,8 +3147,8 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="12.8905" y1="22.4155" x2="12.8905" y2="26.2255" width="0.1524" layer="16"/>
 <wire x1="14.498" y1="20.808" x2="12.8905" y2="22.4155" width="0.1524" layer="16"/>
 <contactref element="J2" pad="10"/>
-<wire x1="12.865" y1="29.573" x2="13.063" y2="29.573" width="0.1524" layer="1"/>
-<wire x1="13.19" y1="29.573" x2="13.063" y2="29.573" width="0.1524" layer="1"/>
+<wire x1="12.865" y1="29.573" x2="13.19" y2="29.573" width="0.1524" layer="1"/>
+<wire x1="13.19" y1="29.573" x2="14.206" y2="29.573" width="0.1524" layer="1"/>
 <wire x1="13.19" y1="29.573" x2="15.494" y2="31.877" width="0.1524" layer="1"/>
 </signal>
 <signal name="3.3V">
@@ -3311,11 +3311,11 @@ Please make sure your boards conform to these design rules.</description>
 <signal name="SWDIO">
 <contactref element="U2" pad="46"/>
 <contactref element="J2" pad="2"/>
-<wire x1="20.574" y1="31.877" x2="20.574" y2="27.48205625" width="0.1524" layer="1"/>
-<wire x1="20.574" y1="27.48205625" x2="21.2598" y2="26.79625625" width="0.1524" layer="1"/>
-<wire x1="21.2598" y1="26.79625625" x2="21.2598" y2="26.4922" width="0.1524" layer="1"/>
-<wire x1="21.2598" y1="26.4922" x2="21.59" y2="26.162" width="0.1524" layer="1"/>
-<wire x1="21.59" y1="26.162" x2="21.59" y2="24.511" width="0.1524" layer="1"/>
+<wire x1="20.574" y1="31.877" x2="20.574" y2="26.97405625" width="0.1524" layer="1"/>
+<wire x1="20.574" y1="26.97405625" x2="21.2598" y2="26.28825625" width="0.1524" layer="1"/>
+<wire x1="21.2598" y1="26.28825625" x2="21.2598" y2="26.2382" width="0.1524" layer="1"/>
+<wire x1="21.2598" y1="26.2382" x2="21.59" y2="25.908" width="0.1524" layer="1"/>
+<wire x1="21.59" y1="25.908" x2="21.59" y2="24.511" width="0.1524" layer="1"/>
 <wire x1="21.59" y1="24.511" x2="21.082" y2="24.003" width="0.1524" layer="1"/>
 <wire x1="21.082" y1="24.003" x2="21.082" y2="21.717" width="0.1524" layer="1"/>
 <wire x1="21.082" y1="21.717" x2="21.1121125" y2="21.6868875" width="0.1524" layer="1"/>
