@@ -2730,11 +2730,11 @@ Please make sure your boards conform to these design rules.</description>
 <contactref element="C5" pad="1"/>
 <contactref element="SWDPROG" pad="3"/>
 <contactref element="SWDPROG" pad="5"/>
-<via x="44.831" y="11.049" extent="1-16" drill="0.35"/>
-<via x="45.72" y="11.049" extent="1-16" drill="0.35"/>
-<via x="46.609" y="11.049" extent="1-16" drill="0.35"/>
-<via x="47.498" y="11.049" extent="1-16" drill="0.35"/>
-<via x="48.387" y="11.049" extent="1-16" drill="0.35"/>
+<via x="44.831" y="11.176" extent="1-16" drill="0.35"/>
+<via x="45.72" y="11.176" extent="1-16" drill="0.35"/>
+<via x="46.609" y="11.176" extent="1-16" drill="0.35"/>
+<via x="47.498" y="11.176" extent="1-16" drill="0.35"/>
+<via x="48.387" y="11.176" extent="1-16" drill="0.35"/>
 <via x="44.831" y="8.636" extent="1-16" drill="0.35"/>
 <via x="45.72" y="8.636" extent="1-16" drill="0.35"/>
 <via x="46.609" y="8.636" extent="1-16" drill="0.35"/>

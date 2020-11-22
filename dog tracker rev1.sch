@@ -10656,13 +10656,13 @@ PTH and SMD connector options available.&lt;/p&gt;
 <part name="S1" library="SparkFun-Switches" library_urn="urn:adsk.eagle:library:535" deviceset="MOMENTARY-SWITCH-SPST" device="-SMD-4.6X2.8MM" package3d_urn="urn:adsk.eagle:package:40176/1" value="Reset"/>
 <part name="GND13" library="TimWoo-Aesthetics" library_urn="urn:adsk.eagle:library:502097" deviceset="GND" device=""/>
 <part name="GND14" library="TimWoo-Aesthetics" library_urn="urn:adsk.eagle:library:502097" deviceset="GND" device=""/>
-<part name="J2" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="CORTEX_DEBUG" device="_PTH" package3d_urn="urn:adsk.eagle:package:38290/1"/>
+<part name="SWDPROG" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="CORTEX_DEBUG" device="_PTH" package3d_urn="urn:adsk.eagle:package:38290/1"/>
 </parts>
 <sheets>
 <sheet>
 <plain>
-<text x="419.862" y="6.604" size="3.81" layer="97">v5</text>
-<text x="351.282" y="9.144" size="3.81" layer="97">Timothy Woo</text>
+<text x="419.862" y="6.604" size="3.81" layer="97">v1</text>
+<text x="351.282" y="9.144" size="3.81" layer="97">Mike Bales</text>
 <text x="397.002" y="24.384" size="3.81" layer="97">CC-BY-SA-4.0</text>
 <text x="264.16" y="266.7" size="5.08" layer="94">SIM7000 / micro USB / SIM Card Interface</text>
 <text x="35.56" y="266.7" size="5.08" layer="94">Headers and Pinouts</text>
@@ -10704,15 +10704,15 @@ logic voltages</text>
 <text x="144.78" y="182.88" size="5.08" layer="94">Voltage Regulator</text>
 </plain>
 <instances>
-<instance part="GND19" gate="1" x="271.78" y="106.68" smashed="yes">
-<attribute name="VALUE" x="269.24" y="104.14" size="1.778" layer="96"/>
+<instance part="GND19" gate="1" x="124.46" y="106.68" smashed="yes">
+<attribute name="VALUE" x="121.92" y="104.14" size="1.778" layer="96"/>
 </instance>
-<instance part="J8" gate="G$1" x="261.62" y="116.84" smashed="yes" rot="R180">
-<attribute name="NAME" x="264.16" y="109.22" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="264.16" y="127" size="1.778" layer="96" rot="R180"/>
+<instance part="J8" gate="G$1" x="114.3" y="116.84" smashed="yes" rot="R180">
+<attribute name="NAME" x="116.84" y="109.22" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="116.84" y="127" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="SUPPLY15" gate="G$1" x="271.78" y="127" smashed="yes">
-<attribute name="VALUE" x="270.764" y="130.556" size="1.778" layer="96"/>
+<instance part="SUPPLY15" gate="G$1" x="124.46" y="127" smashed="yes">
+<attribute name="VALUE" x="123.444" y="130.556" size="1.778" layer="96"/>
 </instance>
 <instance part="U1" gate="G$1" x="317.5" y="182.88" smashed="yes">
 <attribute name="NAME" x="284.48" y="218.44" size="2.54" layer="95"/>
@@ -11023,7 +11023,7 @@ logic voltages</text>
 <instance part="GND14" gate="1" x="33.02" y="162.56" smashed="yes">
 <attribute name="VALUE" x="30.48" y="160.02" size="1.778" layer="96"/>
 </instance>
-<instance part="J2" gate="G$1" x="71.12" y="116.84" smashed="yes">
+<instance part="SWDPROG" gate="G$1" x="71.12" y="116.84" smashed="yes">
 <attribute name="NAME" x="58.42" y="124.714" size="1.778" layer="95" font="vector"/>
 <attribute name="VALUE" x="58.42" y="106.934" size="1.778" layer="96" font="vector"/>
 </instance>
@@ -11034,8 +11034,8 @@ logic voltages</text>
 <net name="GND" class="0">
 <segment>
 <pinref part="GND19" gate="1" pin="GND"/>
-<wire x1="271.78" y1="109.22" x2="271.78" y2="111.76" width="0.1524" layer="91"/>
-<wire x1="271.78" y1="111.76" x2="266.7" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="109.22" x2="124.46" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="111.76" x2="119.38" y2="111.76" width="0.1524" layer="91"/>
 <pinref part="J8" gate="G$1" pin="GND"/>
 </segment>
 <segment>
@@ -11261,12 +11261,12 @@ logic voltages</text>
 <junction x="33.02" y="165.1"/>
 </segment>
 <segment>
-<pinref part="J2" gate="G$1" pin="GND@3"/>
+<pinref part="SWDPROG" gate="G$1" pin="GND@3"/>
 <wire x1="55.88" y1="119.38" x2="53.34" y2="119.38" width="0.1524" layer="91"/>
 <label x="50.8" y="119.38" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="J2" gate="G$1" pin="GND@5"/>
+<pinref part="SWDPROG" gate="G$1" pin="GND@5"/>
 <wire x1="55.88" y1="116.84" x2="53.34" y2="116.84" width="0.1524" layer="91"/>
 <label x="50.8" y="116.84" size="1.778" layer="95"/>
 </segment>
@@ -11275,8 +11275,8 @@ logic voltages</text>
 <segment>
 <pinref part="J8" gate="G$1" pin="VBUS"/>
 <pinref part="SUPPLY15" gate="G$1" pin="V_USB"/>
-<wire x1="266.7" y1="121.92" x2="271.78" y2="121.92" width="0.1524" layer="91"/>
-<wire x1="271.78" y1="121.92" x2="271.78" y2="127" width="0.1524" layer="91"/>
+<wire x1="119.38" y1="121.92" x2="124.46" y2="121.92" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="121.92" x2="124.46" y2="127" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U3" gate="G$1" pin="IN"/>
@@ -11293,8 +11293,8 @@ logic voltages</text>
 <net name="D-" class="0">
 <segment>
 <pinref part="J8" gate="G$1" pin="D-"/>
-<wire x1="266.7" y1="119.38" x2="269.24" y2="119.38" width="0.1524" layer="91"/>
-<label x="269.24" y="119.38" size="1.27" layer="95" xref="yes"/>
+<wire x1="119.38" y1="119.38" x2="121.92" y2="119.38" width="0.1524" layer="91"/>
+<label x="121.92" y="119.38" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
 <pinref part="R2" gate="G$1" pin="1"/>
@@ -11305,8 +11305,8 @@ logic voltages</text>
 <net name="D+" class="0">
 <segment>
 <pinref part="J8" gate="G$1" pin="D+"/>
-<wire x1="266.7" y1="116.84" x2="269.24" y2="116.84" width="0.1524" layer="91"/>
-<label x="269.24" y="116.84" size="1.27" layer="95" xref="yes"/>
+<wire x1="119.38" y1="116.84" x2="121.92" y2="116.84" width="0.1524" layer="91"/>
+<label x="121.92" y="116.84" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
 <pinref part="R1" gate="G$1" pin="1"/>
@@ -11691,7 +11691,7 @@ logic voltages</text>
 <junction x="40.64" y="228.6"/>
 </segment>
 <segment>
-<pinref part="J2" gate="G$1" pin="!RESET"/>
+<pinref part="SWDPROG" gate="G$1" pin="!RESET"/>
 <wire x1="88.9" y1="111.76" x2="91.44" y2="111.76" width="0.1524" layer="91"/>
 <label x="91.44" y="111.76" size="1.778" layer="95"/>
 </segment>
@@ -11795,7 +11795,7 @@ logic voltages</text>
 <junction x="187.96" y="157.48"/>
 </segment>
 <segment>
-<pinref part="J2" gate="G$1" pin="VCC"/>
+<pinref part="SWDPROG" gate="G$1" pin="VCC"/>
 <wire x1="55.88" y1="121.92" x2="53.34" y2="121.92" width="0.1524" layer="91"/>
 <label x="53.34" y="121.92" size="1.778" layer="95"/>
 </segment>
@@ -11818,25 +11818,25 @@ logic voltages</text>
 </net>
 <net name="N$20" class="0">
 <segment>
-<pinref part="J2" gate="G$1" pin="KEY"/>
+<pinref part="SWDPROG" gate="G$1" pin="KEY"/>
 <wire x1="55.88" y1="114.3" x2="53.34" y2="114.3" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$21" class="0">
 <segment>
-<pinref part="J2" gate="G$1" pin="GNDDTCT"/>
+<pinref part="SWDPROG" gate="G$1" pin="GNDDTCT"/>
 <wire x1="55.88" y1="111.76" x2="53.34" y2="111.76" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$24" class="0">
 <segment>
-<pinref part="J2" gate="G$1" pin="SWO/TDO"/>
+<pinref part="SWDPROG" gate="G$1" pin="SWO/TDO"/>
 <wire x1="88.9" y1="116.84" x2="91.44" y2="116.84" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$25" class="0">
 <segment>
-<pinref part="J2" gate="G$1" pin="NC/TDI"/>
+<pinref part="SWDPROG" gate="G$1" pin="NC/TDI"/>
 <wire x1="88.9" y1="114.3" x2="91.44" y2="114.3" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -11847,7 +11847,7 @@ logic voltages</text>
 <label x="111.76" y="170.18" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="J2" gate="G$1" pin="SWDCLK/TCK"/>
+<pinref part="SWDPROG" gate="G$1" pin="SWDCLK/TCK"/>
 <wire x1="88.9" y1="119.38" x2="91.44" y2="119.38" width="0.1524" layer="91"/>
 <label x="91.44" y="119.38" size="1.778" layer="95"/>
 </segment>
@@ -11859,7 +11859,7 @@ logic voltages</text>
 <label x="111.76" y="167.64" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="J2" gate="G$1" pin="SWDIO/TMS"/>
+<pinref part="SWDPROG" gate="G$1" pin="SWDIO/TMS"/>
 <wire x1="88.9" y1="121.92" x2="91.44" y2="121.92" width="0.1524" layer="91"/>
 <label x="91.44" y="121.92" size="1.778" layer="95"/>
 </segment>
